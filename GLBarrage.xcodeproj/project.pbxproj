@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100DCF6DBF8C5068016A4B76 /* libPods-GLBarrageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D93C2A37FA9D99C96CA8A7C /* libPods-GLBarrageTests.a */; };
 		87D33AC31D20F86600CCA8F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D33AC21D20F86600CCA8F6 /* main.m */; };
 		87D33AC61D20F86600CCA8F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D33AC51D20F86600CCA8F6 /* AppDelegate.m */; };
 		87D33AC91D20F86600CCA8F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D33AC81D20F86600CCA8F6 /* ViewController.m */; };
 		87D33ACE1D20F86600CCA8F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87D33ACD1D20F86600CCA8F6 /* Assets.xcassets */; };
 		87D33ADC1D20F86600CCA8F6 /* GLBarrageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D33ADB1D20F86600CCA8F6 /* GLBarrageTests.m */; };
 		87D33AE71D20F86600CCA8F6 /* GLBarrageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D33AE61D20F86600CCA8F6 /* GLBarrageUITests.m */; };
+		9911BC12CD718FCBFAE42D75 /* libPods-GLBarrage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A16DAE39F67B1F2A77673D /* libPods-GLBarrage.a */; };
+		9B73766AAF1B2CEF227CF0DE /* libPods-GLBarrageUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00576E0D040578B68130D770 /* libPods-GLBarrageUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00576E0D040578B68130D770 /* libPods-GLBarrageUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GLBarrageUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16105EEC170FA520F0BD7E99 /* Pods-GLBarrageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLBarrageTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLBarrageTests/Pods-GLBarrageTests.release.xcconfig"; sourceTree = "<group>"; };
 		87D33ABE1D20F86600CCA8F6 /* GLBarrage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLBarrage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D33AC21D20F86600CCA8F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		87D33AC41D20F86600CCA8F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		87D33AE21D20F86600CCA8F6 /* GLBarrageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLBarrageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D33AE61D20F86600CCA8F6 /* GLBarrageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLBarrageUITests.m; sourceTree = "<group>"; };
 		87D33AE81D20F86600CCA8F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95A16DAE39F67B1F2A77673D /* libPods-GLBarrage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GLBarrage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D93C2A37FA9D99C96CA8A7C /* libPods-GLBarrageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GLBarrageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53D9772F71BD27A440AFB8B /* Pods-GLBarrage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLBarrage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLBarrage/Pods-GLBarrage.debug.xcconfig"; sourceTree = "<group>"; };
+		AB899EF0BF0369067192BDDD /* Pods-GLBarrageUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLBarrageUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLBarrageUITests/Pods-GLBarrageUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE255D7590F2DD75C5E449F6 /* Pods-GLBarrageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLBarrageTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLBarrageTests/Pods-GLBarrageTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E823FB92CCBB58DC8BD886D6 /* Pods-GLBarrage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLBarrage.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLBarrage/Pods-GLBarrage.release.xcconfig"; sourceTree = "<group>"; };
+		F51B8F2EB6BB3F0E36B275DC /* Pods-GLBarrageUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLBarrageUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLBarrageUITests/Pods-GLBarrageUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9911BC12CD718FCBFAE42D75 /* libPods-GLBarrage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				100DCF6DBF8C5068016A4B76 /* libPods-GLBarrageTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B73766AAF1B2CEF227CF0DE /* libPods-GLBarrageUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59CC1DACE500CA215F55A5B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A53D9772F71BD27A440AFB8B /* Pods-GLBarrage.debug.xcconfig */,
+				E823FB92CCBB58DC8BD886D6 /* Pods-GLBarrage.release.xcconfig */,
+				CE255D7590F2DD75C5E449F6 /* Pods-GLBarrageTests.debug.xcconfig */,
+				16105EEC170FA520F0BD7E99 /* Pods-GLBarrageTests.release.xcconfig */,
+				AB899EF0BF0369067192BDDD /* Pods-GLBarrageUITests.debug.xcconfig */,
+				F51B8F2EB6BB3F0E36B275DC /* Pods-GLBarrageUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7BC9E408E8915409FF9257D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95A16DAE39F67B1F2A77673D /* libPods-GLBarrage.a */,
+				9D93C2A37FA9D99C96CA8A7C /* libPods-GLBarrageTests.a */,
+				00576E0D040578B68130D770 /* libPods-GLBarrageUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		87D33AB51D20F86600CCA8F6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				87D33ADA1D20F86600CCA8F6 /* GLBarrageTests */,
 				87D33AE51D20F86600CCA8F6 /* GLBarrageUITests */,
 				87D33ABF1D20F86600CCA8F6 /* Products */,
+				59CC1DACE500CA215F55A5B1 /* Pods */,
+				7BC9E408E8915409FF9257D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87D33AEB1D20F86600CCA8F6 /* Build configuration list for PBXNativeTarget "GLBarrage" */;
 			buildPhases = (
+				CF2BA6A16E63D3F41C45B8C7 /* 📦 Check Pods Manifest.lock */,
 				87D33ABA1D20F86600CCA8F6 /* Sources */,
 				87D33ABB1D20F86600CCA8F6 /* Frameworks */,
 				87D33ABC1D20F86600CCA8F6 /* Resources */,
+				F52650B4D8B5622E756A6B3A /* 📦 Embed Pods Frameworks */,
+				0099044E069EFB8C1373901A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87D33AEE1D20F86600CCA8F6 /* Build configuration list for PBXNativeTarget "GLBarrageTests" */;
 			buildPhases = (
+				9E7FAD8DFA30553132806F4E /* 📦 Check Pods Manifest.lock */,
 				87D33AD31D20F86600CCA8F6 /* Sources */,
 				87D33AD41D20F86600CCA8F6 /* Frameworks */,
 				87D33AD51D20F86600CCA8F6 /* Resources */,
+				D88A76EE965E850783C45C23 /* 📦 Embed Pods Frameworks */,
+				5A4652DCDA0304A3A6410DB2 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87D33AF11D20F86600CCA8F6 /* Build configuration list for PBXNativeTarget "GLBarrageUITests" */;
 			buildPhases = (
+				BE98FF5CC764EFF1D4710ACC /* 📦 Check Pods Manifest.lock */,
 				87D33ADE1D20F86600CCA8F6 /* Sources */,
 				87D33ADF1D20F86600CCA8F6 /* Frameworks */,
 				87D33AE01D20F86600CCA8F6 /* Resources */,
+				FF3F11118AB4C65A63851B45 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +304,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0099044E069EFB8C1373901A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLBarrage/Pods-GLBarrage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A4652DCDA0304A3A6410DB2 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLBarrageTests/Pods-GLBarrageTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E7FAD8DFA30553132806F4E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE98FF5CC764EFF1D4710ACC /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF2BA6A16E63D3F41C45B8C7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D88A76EE965E850783C45C23 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLBarrageTests/Pods-GLBarrageTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F52650B4D8B5622E756A6B3A /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLBarrage/Pods-GLBarrage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF3F11118AB4C65A63851B45 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLBarrageUITests/Pods-GLBarrageUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		87D33ABA1D20F86600CCA8F6 /* Sources */ = {
@@ -386,8 +557,10 @@
 		};
 		87D33AEC1D20F86600CCA8F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A53D9772F71BD27A440AFB8B /* Pods-GLBarrage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = GLBarrage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.genju.66yxq.GLBarrage;
@@ -397,8 +570,10 @@
 		};
 		87D33AED1D20F86600CCA8F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E823FB92CCBB58DC8BD886D6 /* Pods-GLBarrage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = GLBarrage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.genju.66yxq.GLBarrage;
@@ -408,6 +583,7 @@
 		};
 		87D33AEF1D20F86600CCA8F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE255D7590F2DD75C5E449F6 /* Pods-GLBarrageTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GLBarrageTests/Info.plist;
@@ -420,6 +596,7 @@
 		};
 		87D33AF01D20F86600CCA8F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16105EEC170FA520F0BD7E99 /* Pods-GLBarrageTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GLBarrageTests/Info.plist;
@@ -432,6 +609,7 @@
 		};
 		87D33AF21D20F86600CCA8F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB899EF0BF0369067192BDDD /* Pods-GLBarrageUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = GLBarrageUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -443,6 +621,7 @@
 		};
 		87D33AF31D20F86600CCA8F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F51B8F2EB6BB3F0E36B275DC /* Pods-GLBarrageUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = GLBarrageUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -471,6 +650,7 @@
 				87D33AED1D20F86600CCA8F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87D33AEE1D20F86600CCA8F6 /* Build configuration list for PBXNativeTarget "GLBarrageTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +659,7 @@
 				87D33AF01D20F86600CCA8F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87D33AF11D20F86600CCA8F6 /* Build configuration list for PBXNativeTarget "GLBarrageUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +668,7 @@
 				87D33AF31D20F86600CCA8F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

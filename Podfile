@@ -5,7 +5,8 @@
 
 target 'GLBarrage' do
 
- pod 'Masonry'
+ pod "Masonry"
+ pod "YYKit"
 
 end
 

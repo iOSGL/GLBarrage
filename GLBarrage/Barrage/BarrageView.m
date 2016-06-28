@@ -13,6 +13,7 @@
 
 #define BarrageAnimationTime 1.5
 #define DefaultAnimationTime 0.3
+#define DefaultCellHeight 44.0
 #define BeginLock(_lock) dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
 #define UnLock(_lock)    dispatch_semaphore_signal(_lock);
 
@@ -63,9 +64,16 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return DefaultCellHeight;
+}
+
 #pragma mark - Open Method
 
 - (void)beginAnimation {
+    [self setHidden:NO animation:YES];
     __weak BarrageView *wself = self;
     self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:BarrageAnimationTime block:^(NSTimer * _Nonnull timer) {
         [wself animationLoop];
@@ -94,7 +102,8 @@
 }
 
 - (void)animationLoop {
-    if (self.currtentRow > self.sourceArray.count) {
+    if (self.currtentRow >= self.sourceArray.count) {
+        [self stopAnimation];
         return;
     }
     [self.tableView beginUpdates];
@@ -102,7 +111,8 @@
     [self.tableView insertRow:self.currtentRow inSection:0 withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView endUpdates];
     if (self.tableView.contentSize.height - _tableView.height > _tableView.contentOffset.y) {
-        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:MAX(self.currtentRow - 4, 0) inSection:0]];
+        [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y+DefaultCellHeight) animated:YES];
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:MAX(self.currtentRow - [self getNumberOFLine], 0) inSection:0]];
         cell.alpha = 0;
         [cell addFadeAnimation];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(BarrageAnimationTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -125,7 +135,7 @@
     [self.dataArray removeAllObjects];
     [self.tableView reloadData];
     self.tableView.contentOffset = CGPointZero;
-    [self setHidden:YES animation:NO];
+    [self setHidden:YES animation:YES];
 }
 
 - (void)createData {
@@ -135,6 +145,16 @@
         [self.sourceArray addObject:title];
     }
 
+}
+
+- (NSInteger)getNumberOFLine {
+    NSInteger module = fmodf(self.tableView.height, DefaultCellHeight);
+    NSInteger numberLineCount = self.tableView.height / DefaultCellHeight;
+    if (module == 0) {
+        return numberLineCount;
+    } else {
+        return numberLineCount + 1;
+    }
 }
 
 #pragma mark - Setter Getter 

@@ -17,6 +17,7 @@
 		87D33B0C1D212CA900CCA8F6 /* BarrageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D33B0B1D212CA900CCA8F6 /* BarrageView.m */; };
 		87E3F73D1D221C2800E821E0 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E3F73C1D221C2800E821E0 /* ContentViewController.m */; };
 		87E3F7431D2243BD00E821E0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E3F7421D2243BD00E821E0 /* UIView+Extension.m */; };
+		87E3F7461D22746D00E821E0 /* BarrageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E3F7451D22746D00E821E0 /* BarrageTableViewCell.m */; };
 		9911BC12CD718FCBFAE42D75 /* libPods-GLBarrage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A16DAE39F67B1F2A77673D /* libPods-GLBarrage.a */; };
 		9B73766AAF1B2CEF227CF0DE /* libPods-GLBarrageUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00576E0D040578B68130D770 /* libPods-GLBarrageUITests.a */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,8 @@
 		87E3F73C1D221C2800E821E0 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		87E3F7411D2243BD00E821E0 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		87E3F7421D2243BD00E821E0 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		87E3F7441D22746D00E821E0 /* BarrageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageTableViewCell.h; sourceTree = "<group>"; };
+		87E3F7451D22746D00E821E0 /* BarrageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageTableViewCell.m; sourceTree = "<group>"; };
 		95A16DAE39F67B1F2A77673D /* libPods-GLBarrage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GLBarrage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D93C2A37FA9D99C96CA8A7C /* libPods-GLBarrageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GLBarrageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53D9772F71BD27A440AFB8B /* Pods-GLBarrage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLBarrage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLBarrage/Pods-GLBarrage.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				87D33B0B1D212CA900CCA8F6 /* BarrageView.m */,
 				87E3F7411D2243BD00E821E0 /* UIView+Extension.h */,
 				87E3F7421D2243BD00E821E0 /* UIView+Extension.m */,
+				87E3F7441D22746D00E821E0 /* BarrageTableViewCell.h */,
+				87E3F7451D22746D00E821E0 /* BarrageTableViewCell.m */,
 			);
 			path = Barrage;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 			files = (
 				87E3F7431D2243BD00E821E0 /* UIView+Extension.m in Sources */,
 				87D33AC61D20F86600CCA8F6 /* AppDelegate.m in Sources */,
+				87E3F7461D22746D00E821E0 /* BarrageTableViewCell.m in Sources */,
 				87E3F73D1D221C2800E821E0 /* ContentViewController.m in Sources */,
 				87D33B091D2126EC00CCA8F6 /* ViewController.m in Sources */,
 				87D33AC31D20F86600CCA8F6 /* main.m in Sources */,

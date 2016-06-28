@@ -35,6 +35,7 @@
     if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
+    self.view.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.barrageView];
     [self.view addSubview:self.startBtn];
     [self.view addSubview:self.stopBtn];
@@ -65,7 +66,7 @@
     NSString *className = @"BarrageView";
     Class targetClass = NSClassFromString(className);
     if (targetClass) {
-        id view = [[targetClass alloc]initWithFrame:CGRectMake(0, 100, MAIN_WIDTH, 200)];
+        id view = [[targetClass alloc]initWithFrame:CGRectMake(0, 100, MAIN_WIDTH, 176)];
         [self.view addSubview:view];
     }
 }
@@ -77,14 +78,14 @@
 }
 
 - (void)stopAnimationAction:(UIButton *)sender {
-    [self.barrageView pauseAnimation];
+    [self.barrageView stopAnimation];
 }
 
 #pragma mark - Setter Getter 
 
 - (BarrageView *)barrageView {
     if (_barrageView == nil) {
-        _barrageView = [[BarrageView alloc]initWithFrame:CGRectMake(0, 100, MAIN_WIDTH, 200)];
+        _barrageView = [[BarrageView alloc]initWithFrame:CGRectMake(0, 100, MAIN_WIDTH, 176)];
     }
     return _barrageView;
 }

@@ -21,5 +21,13 @@
  *  start animation
  */
 - (void)beginAnimation;
+/**
+ *  pause animation
+ */
+- (void)pauseAnimation;
+/**
+ *  stop animation
+ */
+- (void)stopAnimation;
 
 @end

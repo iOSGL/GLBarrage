@@ -6,6 +6,8 @@
 //  Copyright © 2016年 genju. All rights reserved.
 //
 
+#import <YYKit.h>
+#import <Masonry.h>
 #import "ViewController.h"
 #import "BarrageView.h"
 
@@ -34,6 +36,23 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     [self.view addSubview:self.barrageView];
+    [self.view addSubview:self.startBtn];
+    [self.view addSubview:self.stopBtn];
+}
+
+- (void)viewWillLayoutSubviews {
+    [self.startBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-110);
+        make.size.mas_equalTo(CGSizeMake(50, 50));
+
+    }];
+    [self.stopBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-50);
+        make.size.mas_equalTo(CGSizeMake(50, 50));
+
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +70,16 @@
     }
 }
 
+#pragma mark - Button Events
+
+- (void)starAnimationAction:(UIButton *)sender {
+    [self.barrageView beginAnimation];
+}
+
+- (void)stopAnimationAction:(UIButton *)sender {
+    [self.barrageView pauseAnimation];
+}
+
 #pragma mark - Setter Getter 
 
 - (BarrageView *)barrageView {
@@ -58,6 +87,28 @@
         _barrageView = [[BarrageView alloc]initWithFrame:CGRectMake(0, 100, MAIN_WIDTH, 200)];
     }
     return _barrageView;
+}
+
+- (UIButton *)startBtn {
+    if (_startBtn == nil) {
+        _startBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _startBtn.backgroundColor = [UIColor orangeColor];
+        [_startBtn setTitle:@"开始" forState:UIControlStateNormal];
+        [_startBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateHighlighted];
+        [_startBtn addTarget:self action:@selector(starAnimationAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _startBtn;
+}
+
+- (UIButton *)stopBtn {
+    if (_stopBtn == nil) {
+        _stopBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _stopBtn.backgroundColor = [UIColor orangeColor];
+        [_stopBtn setTitle:@"结束" forState:UIControlStateNormal];
+        [_stopBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateHighlighted];
+        [_stopBtn addTarget:self action:@selector(stopAnimationAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _stopBtn;
 }
 
 

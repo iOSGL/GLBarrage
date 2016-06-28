@@ -17,5 +17,9 @@
  *  @return view
  */
 - (instancetype)initWithFrame:(CGRect)frame;
+/**
+ *  start animation
+ */
+- (void)beginAnimation;
 
 @end

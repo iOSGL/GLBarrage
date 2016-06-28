@@ -17,6 +17,10 @@
 
 @property (nonatomic, strong) BarrageView *barrageView;
 
+@property (nonatomic, strong) UIButton *startBtn;
+
+@property (nonatomic, strong) UIButton *stopBtn;
+
 @end
 
 @implementation ViewController

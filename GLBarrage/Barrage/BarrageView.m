@@ -6,13 +6,19 @@
 //  Copyright © 2016年 genju. All rights reserved.
 //
 
+#import <YYKit.h>
+
 #import "BarrageView.h"
+
+#define BarrageAnimationTime 1.5
 
 @interface BarrageView () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, copy) NSArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
+@property (nonatomic, strong) NSTimer *animationTimer;
 
 @end
 
@@ -57,6 +63,16 @@
     return cell;
 }
 
+#pragma mark - Open Method
+
+- (void)beginAnimation {
+    self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:BarrageAnimationTime block:^(NSTimer * _Nonnull timer) {
+
+        NSLog(@"111111");
+
+    } repeats:YES];
+}
+
 #pragma mark - Private Method
 
 - (void)configUI {
@@ -64,7 +80,12 @@
 }
 
 - (void)createData {
-    self.dataArray = @[@"1", @"2", @"3", @"4", @"5"];
+    self.dataArray = [NSMutableArray array];
+    for (NSInteger i = 0; i < 20; i ++) {
+        NSString *title = [NSString stringWithFormat:@"%zi",i + 1];
+        [self.dataArray addObject:title];
+    }
+
 }
 
 #pragma mark - Setter Getter 

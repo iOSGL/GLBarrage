@@ -6,14 +6,14 @@
 //  Copyright © 2016年 genju. All rights reserved.
 //
 
-#import <YYKit.h>
+//#import <YYKit.h>
 #import "UIView+extension.h"
 
 #import "BarrageView.h"
+#import "BarrageTableViewCell.h"
 
 #define BarrageAnimationTime 1.5
 #define DefaultAnimationTime 0.3
-#define DefaultCellHeight 44.0
 #define BeginLock(_lock) dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
 #define UnLock(_lock)    dispatch_semaphore_signal(_lock);
 
@@ -55,12 +55,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
-    cell.textLabel.text = self.dataArray[indexPath.row];
+    BarrageTableViewCell *cell = [BarrageTableViewCell cellForTableView:tableView];
+    cell.randomNumber = arc4random() % 20;
+    cell.content = self.dataArray[indexPath.row];
     return cell;
 }
 
@@ -74,10 +71,7 @@
 
 - (void)beginAnimation {
     [self setHidden:NO animation:YES];
-    __weak BarrageView *wself = self;
-    self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:BarrageAnimationTime block:^(NSTimer * _Nonnull timer) {
-        [wself animationLoop];
-    } repeats:YES];
+    self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:BarrageAnimationTime target:self selector:@selector(animationLoop) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop]addTimer:self.animationTimer forMode:NSRunLoopCommonModes];
 }
 
@@ -108,7 +102,9 @@
     }
     [self.tableView beginUpdates];
     [self.dataArray addObject:self.sourceArray[self.currtentRow]];
-    [self.tableView insertRow:self.currtentRow inSection:0 withRowAnimation:UITableViewRowAnimationFade];
+    NSIndexPath *toInsert = [NSIndexPath indexPathForRow:self.currtentRow inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[toInsert] withRowAnimation:UITableViewRowAnimationFade];
+
     [self.tableView endUpdates];
     if (self.tableView.contentSize.height - _tableView.height > _tableView.contentOffset.y) {
         [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y+DefaultCellHeight) animated:YES];
@@ -164,6 +160,7 @@
         _tableView = [[UITableView alloc]initWithFrame:self.bounds style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
 }

@@ -58,13 +58,18 @@
     _rect.origin.y = 5;
     UIEdgeInsets inset = UIEdgeInsetsZero;
 
+
     if ((self.randomNumber % 2) == 0) {
         _rect.origin.x = 10;
         inset = UIEdgeInsetsMake(0, _rect.size.height+5, 3, 10);
         self.iconImageView.left = 0;
+        self.contentLabel.left = 0;
+
     } else {
         inset = UIEdgeInsetsMake(0, 10, 3, _rect.size.height+5);
         self.iconImageView.right = self.contentLabel.width;
+        self.contentLabel.right = MAIN_WIDTH;
+
     }
 }
 

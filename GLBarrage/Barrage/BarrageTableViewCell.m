@@ -82,10 +82,10 @@
 
 - (UILabel *)contentLabel {
     if (_contentLabel == nil) {
-        _contentLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, BarrageCellContentMaxWidth, DefaultCellHeight)];
+        _contentLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, BarrageCellContentMaxWidth, 43)];
         _contentLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.85];
         _contentLabel.textAlignment = NSTextAlignmentCenter;
-        _contentLabel.layer.cornerRadius = DefaultCellHeight / 2;
+        _contentLabel.layer.cornerRadius = 43 / 2;
         _contentLabel.clipsToBounds = YES;
     }
     return _contentLabel;
@@ -93,7 +93,10 @@
 
 - (UIImageView *)iconImageView {
     if (_iconImageView == nil) {
-        _iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+        _iconImageView = [UIImageView new];
+        _iconImageView.left = 0;
+        _iconImageView.top = 6.5;
+        _iconImageView.size = CGSizeMake(30, 30);
         _iconImageView.image = [UIImage imageNamed:@"image1"];
     }
     return _iconImageView;

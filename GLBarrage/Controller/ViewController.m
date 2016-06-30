@@ -35,7 +35,7 @@
     if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.barrageView];
     [self.view addSubview:self.startBtn];
     [self.view addSubview:self.stopBtn];

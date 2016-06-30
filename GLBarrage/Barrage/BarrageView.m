@@ -11,8 +11,8 @@
 
 #import "BarrageView.h"
 #import "BarrageTableViewCell.h"
-
-#define BarrageAnimationTime 1.5
+    // 1.5
+#define BarrageAnimationTime 0.5
 #define DefaultAnimationTime 0.3
 #define BeginLock(_lock) dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
 #define UnLock(_lock)    dispatch_semaphore_signal(_lock);
@@ -97,27 +97,39 @@
 
 - (void)animationLoop {
     if (self.currtentRow >= self.sourceArray.count) {
-        [self stopAnimation];
-        return;
+        [self reformerArray:self.currtentRow];
+        [self.tableView reloadData];
     }
+
     [self.tableView beginUpdates];
     [self.dataArray addObject:self.sourceArray[self.currtentRow]];
     NSIndexPath *toInsert = [NSIndexPath indexPathForRow:self.currtentRow inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[toInsert] withRowAnimation:UITableViewRowAnimationFade];
-
     [self.tableView endUpdates];
-    if (self.tableView.contentSize.height - _tableView.height > _tableView.contentOffset.y) {
+
+    if (self.tableView.contentSize.height - _tableView.height >= _tableView.contentOffset.y) {
         [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y+DefaultCellHeight) animated:YES];
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:MAX(self.currtentRow - [self getNumberOFLine], 0) inSection:0]];
         cell.alpha = 0;
         [cell addFadeAnimation];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(BarrageAnimationTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             cell.alpha = 1;
+
         });
 
     }
     self.currtentRow ++;
+}
 
+- (void)reformerArray:(NSInteger)index {
+    [self.sourceArray addObjectsFromArray:[self addData]];
+    if (self.dataArray.count > 10 * 2) {
+        for (NSInteger i = 0; i <10; i ++) {
+            [self.dataArray removeObjectAtIndex:i];
+            [self.sourceArray removeObjectAtIndex:i];
+        }
+        self.currtentRow -=10;
+    }
 }
 
 - (void)timerInvalidate {
@@ -136,11 +148,20 @@
 
 - (void)createData {
     self.sourceArray = [NSMutableArray array];
-    for (NSInteger i = 0; i < 20; i ++) {
+    for (NSInteger i = 0; i < 10; i ++) {
         NSString *title = [NSString stringWithFormat:@"%zi",i + 1];
         [self.sourceArray addObject:title];
     }
 
+}
+
+- (NSMutableArray *)addData {
+    NSMutableArray *array = [NSMutableArray new];
+    for (NSInteger i = 0; i < 10; i ++) {
+        NSString *title = [NSString stringWithFormat:@"%zi",i + 1];
+        [array addObject:title];
+    }
+    return array;
 }
 
 - (NSInteger)getNumberOFLine {
